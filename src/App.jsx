@@ -6,12 +6,16 @@ import MyButton from './MyButton'
 
 function App() {
   
-   
+   const [count,setcount]=useState(0);
+   function handleclick(){
+    setcount(count+1);
+   }
   return (
+    
     <>
-      <MyButton></MyButton>
-      <br></br>
-      <MyButton></MyButton>
+      <MyButton count={count} onClick={handleclick}> </MyButton>
+
+      <MyButton count={count} onClick={handleclick}> </MyButton>
     
     </>
   )
